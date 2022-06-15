@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>les quantifieurs</title>
+</head>
+<body>
+    <!-- <p>1 ,10 , 100 </p>
+    <p id="reg"></p> -->
+
+    <p>on apprend à utiliser les regex en JavaScript</p>
+    <p id="reg"></p>
+
+    <!-- <script>
+        var rec=document.querySelector('p').textContent;
+        //le quantifieur + : il va chercher les elements contenant au mois un 0 aprés le 1
+
+        var r1=/10+/g;
+         
+        var res1=rec.match(r1);
+
+        var resultat=document.getElementById('reg');
+        resultat.innerHTML='resultat : ' + res1;
+    </script> -->
+
+    <script>
+  var rec=document.querySelector('p').textContent;
+
+  //tester la presence d'un x
+  var r1=/x+/;
+  res1=r1.test(rec);
+
+  //tester la presence d'un e ou end 
+  var r2=/e(nd)?/g;
+  res2=rec.match(r2);
+
+  //tester si la chaine se finit par e 
+  var r3=/e$/i;
+  res3=r3.test(rec);
+
+  //tester s'il ya deux p successif 
+  var r4=/p{2}/;
+  var res4=r4.test(rec);
+//tester s'il ya le mot javascript 
+var r5=/Java(?=Script)/;
+var res5=r5.test(rec);
+
+var resultat=document.getElementById('reg');
+resultat.innerHTML=
+`presence d'un x dans la chaine : `+res1+
+`<br> occurence de e ou end :`+ res2+
+`<br> chaine finit par un e `+res3+
+`<br> contient deux p à la suite `+res4+
+`<br> présence de "java" suivie de "script " ? :`+res5;
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <STyle>
+        label {
+            display: inline-block;
+            min-width: 288px;
+        }
+    </STyle>
+    <title>les formulaires en HTML</title>
+</head>
+
+<body>
+    <h1>les formulaires en HTML</h1>
+    <form method='post' action='traitement.php'>
+        <label for="prenom">entrez votre prenom</label>
+        <input type="'text" name="prenom" id="prenom" required='required' maxlength="10"><br>
+        <span id="prenom_manquant"></span><br>
+
+        <label for="mail">entrez votre email</label>
+        <input type="'email" name="mail" id="mail" required='required'><br>
+        <!-- l'attribut required pour avoir un msg pour remplir le champ -->
+        <label for="tell">entrez votre num de tel</label>
+        <input type="'tell" name="tell" id="tell" required='required'><br>
+
+        <input type="submit" value="valider" id="bouton_envoi">
+
+    </form>
+    <script>
+        var validation = document.getElementById('bouton_envoi');
+        var prenom = document.getElementById('prenom');
+        var prenom_m = document.getElementById('prenom_manquant');
+        validation.addEventListener('click',f_valid);
+
+        function f_valid(e) {
+            if (prenom.validity.valueMissing) {
+                e.preventDefault();
+                prenom_m.textContent = 'prenom manquant';
+                prenom_m.style.color = 'red';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

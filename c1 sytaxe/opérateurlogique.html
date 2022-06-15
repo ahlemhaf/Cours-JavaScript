@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="opérateur.js"></script>
+</head>
+<body>
+    <h1>les opérateurs logiques en js</h1>
+    <script>
+heure=14;
+
+if(!(heure<=4)==true)
+// ! : fonction non : pur nier la condition false et la rendre true=true
+{
+alert("il est plus de 14h")
+}
+else {
+    alert("il est moins de 14h")
+}
+    </script>
+
+    <script>
+var x=7;
+var y="";
+
+if(x){
+    alert("x est évalué comme true ")
+    /*< un nombre est évalué comme true automatiquement
+     par contre une chaine de caracteres est évaluée comme false automatiquement */
+}
+else {
+    alert(" x est évalué comme false")
+}
+
+if(y){
+    alert("y est évalué comme true")
+}
+else {
+    alert("y est évalué comme false")
+}
+// ************** les stuctures ternaires ********************
+
+/* les srructures ternaires en js : il verifie en 1ére étape la condition par ?
+ si elle est vraie il ecrit la valeur bonjour sinon il ecrit la 2éme valeur  */
+var heure=12,bon="";
+bon=(heure<=5) ? "bonjour": "bonsoir " ;
+alert (bon)
+
+    </script>
+</body>
+</html>

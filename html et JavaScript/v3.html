@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">Du texte et <a href="https://fivepoints-academy.teachable.com/courses/1493527/lectures/34231262"> un lien</a></p>
+    <p class="para">un deuxieme paragraphe </p>
+    <p class="para">un paragraphe para </p>
+
+
+
+    <!-- pour inserer un element html par js -->
+    
+    <!-- <script> 
+    var newPara=document.createElement('p');
+    newPara.id='nouveau';
+    var texte=document.createTextNode('Inséré')
+
+    newPara.appendChild(texte);  -->
+    <!-- // la methode appendchild pour inserer un objet tant que dernier enfant de l'element indiqué dans notre cas le dernier element de l'element body
+    // document.body.appendChild(newPara) -->
+
+
+
+    
+    
+    </script>
+    
+<script>
+    // pour preciser l'emplacement dans element html par js 
+var newPara=document.createElement('p');
+newPara.id='nouveau';
+var texte=document.createTextNode('Inséré')
+
+newPara.appendChild(texte);
+//la methode appendchild pour inserer un objet tant que dernier enfant de l'element indiqué dans notre cas le dernier element de l'element body
+
+
+
+var para1=document.querySelector('.para');
+document.body.insertBefore(newPara,para1)
+
+</script>
+</body>
+</html>

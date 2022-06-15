@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creation des objets</h1>
+<script>
+    //creation d'un objet avec le mot clef new
+var obj_string=new String("je suis un objet");
+var obj_cree=new Object();
+
+obj_cree.prenom="ahlem";
+obj_cree.nom="hafsouni";
+obj_cree.age=24;
+
+alert(obj_cree.prenom);
+</script>
+
+
+<script>
+    //creation d'un objet littéral
+var moi={
+    prenom:"ahlem",
+    nom:"hafsouni",
+    age:24,
+
+    id:function(){
+        return this.prenom+' '+this.nom ;
+    }
+};
+alert(moi.id());
+</script>
+
+
+
+<script>
+//creation d'un objet a partir d'un constructeur
+
+function Identite(p,n,a){
+
+    this.prenom=p;
+    this.nom=n;
+    this.age=a;
+
+}
+
+var ahlem=new Identite("ahlem","hafsouni",24);
+var ahmed=new Identite("selmi","ahmed",26);
+
+alert('age de ahlem est :' + ahlem.age+
+'\nage de ahmed :'+ahmed.age  );
+
+
+</script>
+
+<script>
+function Identite(p,n,a){
+    this.prenom=p;
+   this.nom=n;
+   this.age=a;
+
+}
+var ahlem=new Identite("ahlem","hafsouni",24);
+var ahmed=ahlem;
+ahmed.prenom="eeeeeee"
+
+alert('le prenom de ahlem est:' +' '+ahlem.prenom+''+ahlem.age+
+'\nprenom de ahmed est:'+' '+ ahmed.prenom+' '+ahmed.age)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

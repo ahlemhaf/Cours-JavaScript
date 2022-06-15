@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="cook"></p>
+    <!-- <script>
+        document.cookie = 'prenom1=ahlem; expires=Sun, 17 Jul 2022 12:00:00 UTC; path=/';
+        document.cookie = 'prenom2=safa; expires=Sun, 17 Jul 2022 12:00:00 UTC; path=/';
+
+        document.cookie = 'prenom1=rihem; expires=Sun, 17 Jul 2022 12:00:00 UTC; path=/';
+        document.cookie = 'prenom2=safa; expires=Sun, 17 Jul 2020 12:00:00 UTC; path=/';
+
+
+        var c = document.cookie;
+
+        document.getElementById('cook').innerHTML = c;
+
+    </script> -->
+
+    <script>
+        function creercookie(nom,valeur,jour){
+            //si les jours ont bien été definis
+            if(jour){
+               //on cree un objet datestockant la date actuelle  
+               var date=new Date();
+               //on definit la date d'expiration de cookie 
+               date.setTime(date.getTime()+(jour*24*60*60*1000));
+               //on met la date au bon format pour un cookie 
+               var exp=';expires='+date.toGMTString();
+
+            }
+            //si les jours n'ont pas été definis , pas besoin de calcul
+            else{
+                var exp='';
+
+            }
+            document.cookie=nom+'='+valeur+exp+';path=/';
+        }
+
+        function lireCookie(nom){
+            //on recupere le nom du cookie et le signe '='
+            var nomEtEgal=nom+'=';
+            //recupere tous les cookies dans un tableau 
+            var cTableau =document.cookie.split(';');
+            //parcourir le tableau crée
+            for (var i=0;i<cTableau.length;i++){
+                //on recupere tous les noms et valeurs des cookies
+                var c=cTableau[i];
+                //on supprime les espaces potentiels dans c jusqu'a tomber sur le nom d'un cookie 
+                while(c.charAt(0)==' '){
+                    c=c.substring(1, c.length);
+                }
+                if(c.indexOf(nomEtEgal)==0){
+                   return c.substring(nomEtEgal.length,c.length);
+                }
+            }
+            //si nom du cookie non trouvé , il n'existe pas 
+            return null
+        }
+function supprimerCookie(nom){
+    //on donne le nom de cookie à supprimer,puis on utilise creecookie() pour indiquer une date d'expiration passée
+    creercookie(nom,'',-1);
+}
+
+//on crée deux cookies
+creercookie('cookie1','je suis le premier cookie ',7);
+creercookie('cookie2','je suis un autre cookie ',7);
+
+// supprimerCookie('cookie1');
+
+var affiche=document.getElementById('cook');
+affiche.innerHTML='valeur :'+lireCookie('cookie1');
+
+    </script>
+</body>
+
+</html>

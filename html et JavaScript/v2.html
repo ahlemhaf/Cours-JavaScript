@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> LE DOM HTML</title>
+</head>
+
+<body>
+    <h1 id="gros_titre"> Decouverte du Dom html</h1>
+    <p class="para">Du texte et <a href="https://fivepoints-academy.teachable.com/courses/1493527/lectures/34231262"> un
+            lien</a></p>
+    <p class="para">un deuxieme paragraphe </p>
+
+
+
+    <script>
+        var titre = document.getElementById('gros_titre');
+        var textetitre = titre.innerHTML;
+
+        var textepara = document.querySelector('.para').textContent;
+
+        alert('le titre est :' + textetitre +
+            '\nparagraphe 1 :' + textepara);
+    </script>
+
+    <script>
+        //modifier en js le contenu d'un element html (le titre)
+        document.getElementById('gros_titre').innerHTML = 'titre modifié';
+    </script>
+
+    <script>
+        //pour ajouter un texte à un element html
+        document.getElementById('gros_titre').innerHTML +=' <mark> et de la modification en JavaScript</mark> '
+    </script>
+
+<script>
+    //pour modifier le contenu d'un attribut
+
+    document.querySelector('a').href='http://wikipedia.org'
+</script>
+
+<script>
+    //pour modifier le contenu d'un paragraphe 
+
+    document.querySelector('.para').className='para1';
+</script>
+
+<script>
+    //modifier en js  les styles css 
+
+    document.getElementById('gros_titre').style.color='orange';
+    document.getElementById('gros_titre').style.fontSize='50px '
+</script>
+
+</body>
+
+</html>

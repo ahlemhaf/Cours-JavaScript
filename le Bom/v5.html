@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l'objet History</title>
+</head>
+<body>
+    <h1 id="'gros_titre ">Le BOM</h1>
+    <button id="precident">la derniere page visirée charge</button>
+    <button id="suivant">charge la page suivante dans l'historique</button>
+    <button id="specifique"> 3 pages en arriere</button>
+
+    <p></p>
+
+    <script>
+        var para=document.querySelector('p');
+        var precident=document.getElementById('precident');
+        var suivant=document.getElementById('suivant');
+        var specifique=document.getElementById('specifique');
+
+        precident.addEventListener('click',arriere);
+        suivant.addEventListener('click',avant);
+        specifique.addEventListener('click',spec);
+
+        function arriere(){
+            history.back();
+        }
+        function avant(){
+            history.forward();
+        
+        }
+        function spec(){
+            history.go(-3);
+        }
+
+        var histo=history.length;
+        para.innerHTML='URLS :'+histo;
+    </script>
+</body>
+</html>

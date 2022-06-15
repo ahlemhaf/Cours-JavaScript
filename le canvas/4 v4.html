@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #canvas1 {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas1" width="400" height="200"></canvas>
+    <!-- <script>
+        var canvas = document.getElementById('canvas1');
+        var contexte = canvas.getContext('2d');
+// la methode stroke : pour dessiner des cercles vides 
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.strokeStyle='#4C8'
+        contexte.arc(75,100,50,0,Math.PI);
+        contexte.stroke();
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.strokeStyle='#A4A'
+        contexte.arc(200,100,50,0,2*Math.PI);
+        contexte.stroke();
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.strokeStyle='#48C'
+        contexte.arc(325,100,50,Math.PI,2*Math.PI);
+        contexte.stroke();
+
+    </script> -->
+
+    <script>
+              var canvas = document.getElementById('canvas1');
+        var contexte = canvas.getContext('2d');
+// la methode fill : pour dessiner des cercles pleines 
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.fillStyle='#4C8'
+        contexte.arc(75,100,50,0,Math.PI);
+        contexte.fill();
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.fillStyle='#A4A'
+        contexte.arc(200,100,50,0,2*Math.PI);
+        contexte.fill();
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.fillStyle='#48C'
+        contexte.arc(325,100,50,Math.PI,2*Math.PI);
+        contexte.fill();
+    </script>
+
+
+</body>
+
+</html>

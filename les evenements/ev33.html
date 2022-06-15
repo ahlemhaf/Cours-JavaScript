@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <title>les evenements </title>
+    <meta charset="UTF-8">
+ 
+<style>
+    div{
+        border: 2px solid orange;
+        padding:20px;
+        margin:10px
+    }
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="gros_titre"> les evenements </h1>
+    <div id="div1">
+        <p id="p1"> phase de bouillonnement utiisée</p>
+    </div>
+
+    <div id="div2">
+        <p id="p2">phase de capture utilisée </p>
+    </div>
+
+    <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+        var div2 = document.getElementById('div2');
+        var p2 = document.getElementById('p2');
+
+        //phase de bouillonnement utiisée : les evenements vont declenchés selon la structure du dom càd en partant de l'element le plus profond p1 puis div1  
+        div1.addEventListener('click', messagediv1);
+        p1.addEventListener('click', messagep1);
+        function messagediv1() { alert('evenement du div 1'); };
+        function messagep1() { alert('evenement du paragraphe 1'); };
+
+        // phase de capture utilisée pourdiv2 et p2 : l'inverse de la phase de bouill: les evenements sont declenchés lors de la decente du dom cad du plus profond div2 vers p2  
+        div2.addEventListener('click', messagediv2, true);
+        p2.addEventListener('click', messagep2, true);
+        function messagediv2() { alert('evenement du div 2'); };
+        function messagep2() { alert('evenement du paragraphe 2'); };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>l'objet Math</h1>
+    <script>
+        //random : donne un nb decimal entre 0 et 1
+        var x=Math.random();
+        var y=Math.random();
+
+        alert('contenu de x :'+x+
+        '\n contenu de y :'+y );
+    </script>
+
+<script>
+
+    var x=Math.random()*1000;
+    var y=Math.random()*1000;
+
+    alert('contenu de x :'+x+
+    '\n contenu de y :'+y );
+</script>
+
+<script>
+        var x=Math.random()*1000;
+        var y=Math.round(x);
+
+        alert('contenu de x :'+x+
+        '\n contenu arrondi :'+y );
+</script>
+
+<script>
+   var x=Math.random()*1000;
+        var inf=Math.floor(x);
+        var sup=Math.ceil(x);
+
+        alert('contenu de x :'+x+
+        '\n  arrondi inferieur:'+inf+
+        '\n arrondi superieur '+ sup);
+</script>
+
+
+<script>
+    var min=Math.min(0,5,6,8);
+var max =Math.max(55,2,88,6)
+
+    alert('min est '+min +
+    '\n max est '+max )
+</script>
+
+<script>
+    var x =2;
+    var y=-10;
+
+    var absx=Math.abs(x);
+    var absy=Math.abs(y);
+
+    alert('v absolue de x est :'+absx+
+    '\n v absolue de y est :'+absy)
+</script>
+
+
+<script>
+    var x=5;
+    y=3;
+    z=0.5;
+
+    var power=Math.pow(x,y);
+    var racine=Math.sqrt(x);
+    var cos=Math.cos(z);
+    var sin=Math.sin(z);
+    var pi=Math.PI;
+
+    alert('Resultat de pow : '+power+
+    '\n racine de 5 est :'+racine+
+    '\n cos est :'+cos+
+    '\nsin est: '+sin +
+    '\npi est :'+pi )
+
+</script>
+
+</body>
+</html>

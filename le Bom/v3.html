@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="'gros_titre ">Le BOM</h1>
+    <p></p>
+<!-- 
+    <script>
+        var langue=navigator.language;
+        var navigator=navigator.appName;
+        var version=navigator.appVersion;
+        var moteur=navigator.product;
+        var cookieA=navigator.cookieEnabled;
+
+        var para=document.querySelector('p');
+        para.innerHTML=
+    'langue est :'+langue+
+    '<br>nom du navigateur :'+navigator+
+    '<br> la version est'+version+
+    '<br>version :'+moteur+
+    '<br>cookieA'+cookieA;
+
+    </script> -->
+
+    <script>
+        var para=document.querySelector('p');
+        var loc=navigator.geolocation;
+        (function(){
+            if(loc){
+                loc.getCurrentPosition(coordonnees);
+            }
+            else{
+                para.innerHTML='localisation non disponibe '
+            }
+        })();
+
+        function coordonnees (x){
+            para.innerHTML=
+            'latitude :'+x.coords.latitude+
+            '<br>longitude : '+x.coords.longitude;
+        }
+    </script>
+</body>
+</html>

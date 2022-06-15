@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> l'objet array et les tableaux </title>
+</head>
+<body>
+    <script>
+var prenoms =['assma','ahmed','amani'];
+prenoms[0]='safa';
+alert(prenoms[0]);
+    </script>
+
+
+<script>
+
+var prenoms =['assma','ahmed','amani'];
+alert('notre tableau contient :'+prenoms.length+'elements ')
+
+</script>
+
+<script>
+var prenoms =['assma','ahmed','amani'];
+prenoms[prenoms.length]='eline';
+prenoms[prenoms.length]='nadine';
+
+alert('on a ajouté '+prenoms[3]+' '+'et'+' '+prenoms[4]+' '+'à notre tableau')
+
+</script>
+
+
+<script>
+var prenoms =['assma','ahmed','amani']; p='';
+
+for(var i=0; i<prenoms.length;i++){
+p+='prénom n°'+ (i+1) + ":" +prenoms[i] + '\n';
+}
+alert(p)
+
+</script>
+</body>
+</html>

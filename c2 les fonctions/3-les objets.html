@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>les objets en js</h1>
+<script>
+
+var primitive="je suis une variable primitive";
+
+
+var moi={
+    prenom:"ahlem",
+    Nom:"hafsouni",
+    age:24,
+
+    identite: function (){
+        return 'prenom :' +this.prenom+
+       ' \nNom : '+ this.Nom+
+       '\nage : '+this.age ;
+    }
+}
+
+alert(moi.identite());
+/* moi:objet
+prenom,nom ,age :sont des propriétés
+identitie: methode */
+</script>
+
+</body>
+</html>

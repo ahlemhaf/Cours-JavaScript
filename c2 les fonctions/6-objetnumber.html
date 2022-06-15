@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les methodes de l'objet number</title>
+</head>
+<body>
+<h1>les methodes de l'objet number</h1>
+    <script>
+var min=Number.MIN_VALUE;
+var max=Number.MAX_VALUE;
+var infnegative=Number.NEGATIVE_INFINITY;
+var infpositive=Number.POSITIVE_INFINITY;
+var notnumber=Number.NaN;
+
+alert('min : '+ min+ 
+'\nmax:'+max+
+'\ninf negative :'+ infnegative+
+'\ninfpositive :'+ infpositive+
+'\npas un nombre'+ notnumber);
+
+    </script>
+
+    <script>
+        var x=10;
+        var t=x.toString();
+        alert('type x:'+typeof(x)+
+        '\ntype t :'+typeof(t));
+    </script>
+
+
+
+<script>
+    // Cette maniére fonctionne avec l'arrondi c-a-d resultat=10.46
+    var x=10.45981;
+    var d=x.toFixed(2);// 2 chifres apres le ,
+
+    alert('valeur de d est : '+ d +
+    '\ntype de d est:'+typeof(d));
+
+</script>
+
+<script>
+
+var x=10.8991;
+var d=x.toPrecision(4);//affiche 4 nombres 
+
+    alert('valeur de d est : '+ d +
+    '\ntype de d est:'+typeof(d));
+
+
+</script>
+
+
+<script>
+
+    var x=10.4591;
+    var d=x.toExponential(3);
+    
+        alert('valeur de d est : '+ d +
+        '\ntype de d est:'+typeof(d));
+    
+    </script>
+
+
+<script>
+
+var x="23.25698";
+
+var int=parseInt(x);
+var dec=parseFloat(x);
+
+alert('parseInt () : '+' '+ int + typeof(int)+
+'\nparsefloat() :'+' '+dec + typeof(dec));
+
+</script>
+
+</body>
+</html>

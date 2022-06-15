@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre"> les evenements </h1>
+    <div id="div">
+    <p >un premier paragraphe  </p>
+    <p >un deuxieme paragraphe </p>
+</div>
+
+<script>
+    var div=document.getElementById('div');
+    var p1=document.querySelector('p');
+
+    div.addEventListener('click',messageDiv);
+    p1.addEventListener('click',messageP);
+
+    function messageDiv(){
+        alert('evenement du div ')
+    }
+
+    function messageP(){
+        alert('evenement du paragraphe')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>la portée en JavaScript </h1>
+
+<script>
+    // variable locale 
+function locale (){
+    var x=5;
+    alert(x)
+}
+locale()
+</script>
+
+<script>
+    //variable globale : appel ds une fct locale 
+   /* mauvaise utilisation de definir une variable globale et l'appeler dans une fonction locale*/
+    var x=4;
+    function locale(){
+        alert(x)
+    }
+    locale()
+    alert(x)
+</script>
+
+<script>
+    var x=4;//variable globale 
+    function locale(){
+var x=7;// variable locale 
+return x;
+
+    }
+    alert('x globale est '+x+
+    '\n x locale est :'+locale());
+</script>
+    
+</body>
+</html>

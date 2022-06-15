@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>les methodes de l'objet array</h1>
+<script>
+/* la methode push:pour ajouter des éléments à la fin
+ du tableau et donne leur taille */
+
+
+var prenoms=['ahlem','rihem','safa'],p='';
+var taille=prenoms.push('asma','amira');
+
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+
+alert('le tableau contient '+taille+' éléments: \n\n'+ p)
+</script>
+
+
+<script>
+/*la méthode pop: supprime la derniere element du tableau */
+var prenoms=['ahlem','rihem','safa'],p='';
+var suppr=prenoms.pop();
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+
+alert(p+'\n\nnous avons supprimé '+suppr+' du tableau ')
+</script>
+
+
+<script>
+    //methode unshift:pour ajouter des elements au debut du tab
+   var prenoms=['ahlem','rihem','safa'],p=''; 
+   var taille=prenoms.unshift('amira','siwar');
+   for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('notre tab contient '+taille+'prenoms\n\n'+ p)
+
+</script>
+
+
+<script>
+    //methode shift :pour supprimer le premier element du tableau
+var prenoms=['ahlem','rihem','safa'],p=''; 
+var suppr=prenoms.shift();
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('mon nouveau tableau : \n '+p+'\n\nprenom supprimé est '+suppr)
+</script>
+
+<script>
+    //la méthode splice :pour ajouter ou supprimer des elements du tableau
+//1-pour l'ajout des elements 
+var prenoms=['ahlem','rihem','safa'],p=''; 
+prenoms.splice(1,0,'hani','mariem');
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('nouveau tableau : \n\n'+p);
+</script>
+
+<script>
+    //2- pour la suppression des elements 
+    var prenoms=['ahlem','rihem','safa','hiba','sirine'],p=''; 
+prenoms.splice(0,2);// il supprime à partir de la position 0; 2 elements 
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('nouveau tableau : \n\n'+p);
+</script>
+
+
+<script>
+       /*methode sort : les elements sont classés en ordre alphabétique et en
+       majuscule avant minuscule 
+       !!! cette methode uniquement pour comparer des chaines de caracteres */
+    var prenoms=['Rihem','rihem','Ahlem','ahlem'],p='';
+    prenoms.sort();
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('nouveau tableau : \n\n'+p);
+</script> 
+
+
+<script>
+    //methode inverse : affiche l'inverse de la methode sort
+     var prenoms=['Rihem','rihem','Ahlem','ahlem'],p='';
+    prenoms.sort();
+    prenoms.reverse();
+for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('nouveau tableau : \n\n'+p);
+</script>
+
+<script>
+    /*methode join : retourner les elements d'un tableau sous forme 
+    d'une chaine de caracteres */
+
+    var prenoms=['Rihem','rihem','Ahlem','ahlem'],p='';
+    var chaine=prenoms.join('/');
+    for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+alert('notre tableau:\n '+ p +
+'\n\nla chain renvooyée par join est ' + chaine  )
+
+</script>
+
+
+<script>
+    /* methode slice :permet d'extraire un nouveu tablau à partir 
+    d'un autre tableau  */
+
+    var prenoms=['ahlem','rihem','safa','hiba','sirine'],p='';
+    var filles=prenoms.slice(0,4);//à partir de la psition 0,il donne les 4elements 
+
+    for(var i=0; i< prenoms.length;i++){
+    p+='prenom n° '+(i+1) + ':' +prenoms[i]+'\n'
+}
+
+alert('notre tableau de base est:'+prenoms+
+'\n\n le tableau créé par slice est '+ filles)
+</script>
+
+
+<script>
+    /* la methode concat : pour concatiner les tableaux */
+    var garcons=['ahmed','amine'];
+    var filles =['ahlem','rihem'];
+    var gf=garcons.concat(filles);
+    var fg=filles.concat(garcons);
+
+   
+alert('valeurs du tab garcons : '+garcons+
+'\n valeurs du tab filles :'+filles+
+'\n tab gf :'+gf + 
+'\n tab fg :'+fg);
+</script>
+
+
+<script>
+    /* pour concatiner 3 tableaux */
+    var garcons=['ahmed','amine'];
+    var filles =['ahlem','rihem'];
+    var animaux =['elephant','serpent']
+
+var fusion =garcons.concat(filles,animaux );
+   
+alert('tableau fusion est '+fusion )
+</script>
+
+</body>
+</html>

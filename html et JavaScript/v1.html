@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> LE DOM HTML</title>
+</head>
+
+<body>
+    <h1 id="gros_titre"> Découverte du DOM HTML</h1>
+    <p class="para">Du texte et <a href="https://fivepoints-academy.teachable.com/courses/1493527/lectures/34231262"> un lien</a></p>
+    <p class="para">un deuxieme paragraphe </p>
+    <p class="para">un paragraphe para </p>
+
+    <script>
+        var titre = document.getElementById('gros_titre');
+        alert(titre);
+    </script>
+
+    <script>
+        var tableau = document.getElementsByTagName('p');
+        alert('notre tableau contient : '+ tableau.length +'paragraphe');
+    </script>
+
+
+<script>
+     var tableau = document.getElementsByClassName('para');
+        alert('notre tableau contient : '+ tableau.length +'paragraphes portant la classe para ');
+</script>
+
+<script>
+var lien=document.querySelector('p a')
+var p=document.querySelectorAll('.para')
+
+alert('information dans le lien est :'+lien +
+'\n dans p[0] : '+p[0]+
+'\n dans p[1] : '+p[1]);
+</script>
+
+<script>
+    var titre=document.getElementById('gros_titre').innerHTML;
+    alert(titre);
+</script>
+
+<script>
+var titre=document.querySelector('.para').innerHTML
+var t=document.querySelector('.para').textContent
+alert('contenu de titre est :'+titre+
+'\nle contenu de t est : '+t  )
+</script>
+
+
+<script>
+var titre_page=document.title;
+var page= ducument.body;
+var lien= document.links;
+
+alert('contenu 1 :'+titre_page+
+'\ncontenu 2 :'+page +
+'\ncontenu 3 :'+ lien[0] );
+</script>
+</body>
+
+</html>

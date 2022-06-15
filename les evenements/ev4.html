@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            border: 2px solid orange;
+            background-color: aqua;
+            padding: 20px;
+            margin: 10px
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="gros_titre"> les evenements </h1>
+    <div id="div1">
+        <p id="p1">Qui est le declencheur ? le porteur d'évenement </p>
+    </div>
+    <!-- <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        div1.addEventListener('click',message);
+        function message(event){
+            this.innerHTML='element declencheur :'+event.target+
+            '<br>element pourtant l\'evenement :' + event.currentTarget;
+        }
+        
+    </script> -->
+
+    <!-- <SCript>
+        // pour savoir le type de l'evenement qui  est click
+         var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        div1.addEventListener('click',message);
+        function message(e){
+            this.innerHTML='type d\'evenement  declenché :'+e.type
+        }
+    </SCript> -->
+
+
+    <!-- <script>
+        //pour faire un stop de la propagation
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        div1.addEventListener('click',texteD,true);
+        p1.addEventListener('click',texteP,true);
+        function texteD(e){
+            alert('stop à la propagation ');
+            e.stopPropagation();
+            //la methode stoppropagation va empecher les autres evenements qui les suivent 
+        }
+        function texteP(){
+            alert(`ceci ne s'affichera pas `)}
+        
+    </script> -->
+
+    <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        div1.addEventListener('click', texteD, true);
+        p1.addEventListener('click', texteP, true);
+        function texteD(e){
+            e.preventDefault();
+        }
+        function texteP(){
+            alert('la méthode preventDefault n\'empeche pas la propagation ')
+        }
+    </script>
+</body>
+
+</html>

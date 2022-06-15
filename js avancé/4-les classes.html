@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>on apprend à utiliser les [regex] en JavaScript en 2169</p>
+    <p id="reg"></p>
+
+    <!-- <script>
+        var rec=document.querySelector('p').textContent;
+
+        var r1=/aeiouy/g;
+        res1=rec.match(r1);
+
+        var r2=/[aeiouy]/g;
+        var res2=rec.match(r2);
+
+        var resultat=document.getElementById('reg');
+        resultat.innerHTML=
+        `recherche sans classe : `+res1+
+        `<br> recherche avec classe :`+res2;
+    </script> -->
+
+    <!-- <script>
+            var rec=document.querySelector('p').textContent;
+
+            var r1=/[C-X]/g;
+            var res1=rec.match(r1);
+
+            var r2=/[aeiou]/g;
+            var res2=rec.match(r2);
+
+            var r3=/[0-9]/
+            res3=rec.match(r3);
+
+            var r4=/^[A-Z]/;
+            var res4=r4.test(rec);
+
+            r5=/[0-9]{4}/;
+            var res5=rec.match(r5);
+            var resultat=document.getElementById('reg');
+        resultat.innerHTML=
+       `majuscule entre c et x :`+res1+
+       `<br> tout sauf voyelles minuscules : `+res2+
+       `<br> tous les chiffres :`+res3+
+       `<br> Majuscule en debut de chaine: `+res4+
+       `<br> succession de 4 chiffres  :`+res5;
+    </script> -->
+
+    <!-- <script>
+          var rec=document.querySelector('p').textContent;
+          var r1=/[a-zàéè]/g;
+          var res1=rec.match(r1);
+
+          var r2=/[a-zA-Z0-9]/g;
+          var res2=rec.match(r2);
+
+          var r3=/[^a-zA-Z]/g;
+          var res3=rec.match(r3);
+
+          var resultat=document.getElementById('reg');
+          resultat.innerHTML=
+          `lettre minuscule plus à,é,è : `+res1+
+          `<br>les lettres majus et minis el les chiffres :`+res2+
+          `<br> tous sauf a-z et A-Z :`+res3;
+    </script> -->
+
+    <!-- <script>
+        var rec = document.querySelector('p').textContent;
+
+        var r1=/\[regex\]/g;
+        var res1=rec.match(r1);
+
+        var r2=/[e\[\]]/g;
+        var res2=rec.match(r2);
+
+        var r3=/[0-9-]/g;
+        var res3=rec.match(r3);
+
+        var r4=/\?$/;
+        var res4=rec.match(r4);
+
+
+        var resultat=document.getElementById('reg');
+          resultat.innerHTML=
+          `recherche [regex ] :`+res1+
+          `recherche "e", "[" ,"]" :`+res2+
+          `<br> recherche 0-9 et "-" :`+res3+
+          `<br>recherche "?" en fin de chaine :`+res4;
+    </script> -->
+
+
+    <script>
+          var rec = document.querySelector('p').textContent;
+          var r1=/./g;
+          var res1=rec.match(r1);
+
+          var r2=/\d/g;
+          var res2=rec.match(r2);
+
+          var r3=/\D/g;
+          var res3=rec.match(r3);
+
+          var r4=/\br/;
+          var res4=r4.test(rec);
+
+          var resultat=document.getElementById('reg');
+          resultat.innerHTML=
+          `tout sauf une nouvelle ligne`+res1+
+          `<br>tous les chiffres `+res2+
+          `<br>tout sauf [0-9] `+res3+
+          `<br>en debut ou fin de mot ? :`+res4;
+    </script>
+
+</body>
+
+</html>

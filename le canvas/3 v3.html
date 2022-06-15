@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #canvas1 {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas1" width="400" height="200"></canvas>
+    <!-- <script>
+                      var canvas=document.getElementById('canvas1');
+        var contexte=canvas.getContext('2d');
+
+        contexte.trokeStyle='#48C';
+
+        contexte.moveTo(20,20);
+        contexte.lineTo(300,150);
+
+        contexte.stroke();
+    </script> -->
+
+    <!-- <script>
+        var canvas = document.getElementById('canvas1');
+
+        var contexte = canvas.getContext('2d');
+
+        contexte.trokeStyle = '#48C';
+
+        contexte.moveTo(50, 50);
+        contexte.lineTo(350, 150);
+        contexte.lineTo(50, 150);
+        contexte.lineTo(50, 50);
+
+        contexte.stroke();
+    </script> -->
+
+    <script>
+        var canvas = document.getElementById('canvas1');
+        var contexte = canvas.getContext('2d');
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.strokeStyle='#48C'
+        contexte.moveTo(100,50);
+        contexte.lineTo(300,150);
+        contexte.stroke();
+
+        contexte.beginPath();
+        contexte.lineWidth='10';
+        contexte.strokeStyle='#C24'
+        contexte.moveTo(300,160);
+        contexte.lineTo(100,160);
+        contexte.stroke();
+
+        contexte.beginPath();
+        contexte.lineWidth='5';
+        contexte.strokeStyle='#A4A'
+        contexte.moveTo(100,150);
+        contexte.lineTo(300,50);
+        contexte.stroke();
+
+
+
+
+    </script>
+
+</body>
+
+</html>

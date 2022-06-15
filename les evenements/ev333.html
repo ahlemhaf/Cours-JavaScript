@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div{
+            border: 2px solid orange;
+            padding:20px;
+            margin:10px
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="gros_titre"> les evenements </h1>
+    <div id="div1">
+        <p id="p1">un exemple plus <strong>complexe</strong></p>
+    </div>
+    <script>
+        var body = document.body;
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+        var strong = document.querySelector('strong');
+
+        p1.addEventListener('click', CP1, true);
+        strong.addEventListener('click', CS, true);
+        function CP1(){ alert('capture paragraphe'); };
+        function CS(){ alert('capture strong'); };
+
+
+div1.addEventListener('click',BD1);
+body.addEventListener('click',BB);
+function BD1(){alert('bouillonnement div')};
+function BB(){alert('bouillonnement body')}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>les méthodes de l'objet string </h1>
+    <script>
+        // les méthodes :toLowerCase  ,toUpperCase
+var texte="bonjour TT LES MONDE ";
+
+var texte_min=texte.toLowerCase();
+var texte_maj=texte.toUpperCase();
+
+alert('le texte est:'+' '+ texte+
+'\ntexte en min est :'+' '+texte_min+
+'\ntexte en maj est :'+' '+texte_maj);
+
+    </script>
+
+
+<script>
+    //la méthoe charAt :
+var texte="hello Ahlem";
+
+var pos0=texte.charAt(0);
+var pos5=texte.charAt(5);
+var pos7=texte.charAt(7);
+
+alert('position 0 est'+' '+pos0+
+'\nposition 5 est'+' '+pos5+
+'\nposition 7 est '+pos7);
+
+</script>
+
+
+<script>
+    // les occurences dans une chaine de caractéres 
+
+    var texte="j'apprends le JAVASCRIPT";
+
+    var premiere=texte.indexOf('p');
+    var derniere=texte.lastIndexOf('p');
+    var sequence=texte.indexOf('le');
+
+    alert('premier "p" trouvé en position :'+' '+premiere+
+    '\ndernier "p" se trouve dans :'+' '+derniere+
+    '\npremier "le" se trouve dans la position '+ sequence )
+</script>
+
+<script>
+// methode :replace 
+
+var texte="j'apprends le JAVASCRIPT";
+
+alert(texte.replace("JAVASCRIPT","PHP"));
+
+
+</script>
+
+<script>
+//methode :slice
+var texte="j'apprends le JAVASCRIPT";
+
+alert(texte.slice(0,10));
+
+
+</script>
+
+
+<script>
+    //methode :slice
+    var texte="j'apprends le JAVASCRIPT "; /*il faut mettre l'espace 
+    pour recuperer le dernier caractere */
+    
+    alert(texte.slice(-11,-1));
+
+    </script>
+
+
+
+<script>
+ // la methode trim
+    var texte="           j'apprends le JAVASCRIPT ";
+
+    var textenettoye=texte.trim();
+
+    alert('avant trim:'+texte+
+    '\ntexte apres trim : '+ textenettoye)
+    
+    </script>
+
+</body>
+</html>

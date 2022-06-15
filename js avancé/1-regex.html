@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Engagez vous qu'ils disent , rengagez vous qu'ils disaient !</p>
+<p id="reg"></p>
+
+<!-- <script>
+    // la methode match elle cherche des caracteres dans une séquence 
+    var expr=document.querySelector('p');
+    // l'option i : peu n'importe en minuscule ou en majuscule (option i est insensible à la case )
+
+
+    var r1=/engagez/i;
+    var r2=/engagez/ig;
+
+    var res1=expr.textContent.match(r1);
+    var res2=expr.textContent.match(r2);
+
+    var resultat=document.getElementById('reg');
+    resultat.innerHTML='resultat match() sur regex 1 :'+res1+
+    '<br>resultat match() sur regex 2'+res2;
+</script> -->
+
+
+<script>
+//     // la methode search elle cherche la position du mot 
+//     var expr=document.querySelector('p');
+
+
+// var r1=/engagez/i;
+// var r2=/engagez/;
+
+// var res1=expr.textContent.search(r1);
+// var res2=expr.textContent.search(r2);
+
+// var resultat=document.getElementById('reg');
+// resultat.innerHTML='resultat serch() sur regex 1:  '+  res1+
+// '<br>resultat search() sur regex 2:' + res2;
+
+// </script>
+
+
+
+<script>
+    // la methode replace 
+
+//     var expr=document.querySelector('p');
+
+
+//   var r1=/vous/i; 
+//   // i : selecteur du premier mot uniquement par contre ig il verifie tout le texte
+//    var r2=/vous/ig;
+
+//     var res1=expr.textContent.replace(r1,'moi');
+//      var res2=expr.textContent.replace(r2,'moi');
+//     var resultat=document.getElementById('reg');   
+//       resultat.innerHTML='resultat match() sur regex 1 :'+res1+
+//      '<br>resultat match() sur regex 2'+res2;
+
+
+// </script>
+
+
+<!-- <script>
+    //la methode test  : retourne false et true 
+    
+var rec=document.querySelector('p').textContent;
+
+var r1=/ENGAGEZ/;
+var r2=/ENGAGEZ/i;
+
+var res1=r1.test(rec);
+var res2=r2.test(rec);
+
+var resultat=document.getElementById('reg');
+resultat.innerHTML='resultat 1 : ' + res1+
+`<br>resultat 2 :`+ res2 ;
+
+
+
+</script>  -->
+
+<script>
+    //la methode exec: elle renvoie une fois le texte s'il est trouvé(meme s'il est trouvé plusieurs fois )
+
+    
+    var rec=document.querySelector('p').textContent;
+
+var r1=/aient/;
+
+
+var res1=r1.exec(rec);
+
+
+var resultat=document.getElementById('reg');
+resultat.innerHTML='resultat 1 : ' + res1;
+
+
+
+
+
+</script>
+</body>
+</html>

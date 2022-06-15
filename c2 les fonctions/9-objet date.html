@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>l'objet date </h1>
+    <script>
+// avec l'objet date on ne précisant pas d'arguments 
+        var datelit = Date();
+        var datems = Date.now();
+
+        alert('date littérale : ' + datelit +
+            '\nDate sous forme de ms : ' + datems);
+
+    </script>
+
+    <script>
+        // date sous forme littérale 
+         
+        var d=new Date();
+
+        alert(d)
+    </script>
+
+
+<script>
+    // avec l'objet date en précisant des arguments 
+      var d=new Date("january 25,2015 09:00:00");
+
+alert(d)
+</script>
+
+
+<script>
+var d1=new Date(2015,6,24,12,40,30,110);
+var d2=new Date (2015,6,15);
+
+alert('Date 1: '+d1+
+'\nDate 2 : '+d2);
+</script>
+
+<script>
+    var diso1=new Date("2015-06-15")
+    var diso2=new Date ("2015-06-15T12:00:00");
+
+    var dcourte=new Date("06/15/2015");
+    var dlongue=new Date ("january 25 2015 09:00:00")
+    var dcomp=new Date("sun jan 25 2015 09:00:00 GHT+0100")
+ 
+ alert('d1  :'+diso1+
+ '\n d2 : '+ diso2+
+ ('\nd3 : '+dcourte ))
+</script>
+
+</body>
+
+</html>

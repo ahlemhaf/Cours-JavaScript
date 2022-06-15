@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre"> Le DOM</h1>
+
+    <div>
+        <p class="para"> Du texte </p>
+        <p class="para"> un deuxieme paragraphe</p>
+
+    </div>
+
+    <script>
+        //modifier l'élément parent (div)
+        var p=document.querySelector('.para');
+        var div=p.parentNode;
+        div.style.color='orange';
+
+    </script>
+    
+</body>
+</html>
